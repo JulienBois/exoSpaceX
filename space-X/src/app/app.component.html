@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SpaceX</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="goToHome()">Lancements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="goToCapsules()">Capsules</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+<div class="container">
+
+  
+<h1>Liste des lancements de spaceX</h1>
+
+  <table class="table table-dark table-hover table-rounded">
+    <thead>
+      <tr>
+        <th scope="col">Id de lancement</th>
+        <th scope="col">date de lancement</th>
+        <th scope="col">succès</th>
+        <th scope="col">nom de mission</th>
+        <th scope="col">nom de la capsule</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let result of lancements">
+      <tr>
+        <th scope="row">{{result.flight_number}}</th>
+        <td>{{result.launch_date_utc}}</td>
+        <td>{{result.launch_success}}</td>
+        <td>{{result.mission_name}}</td>
+        <td>{{result.rocket.rocket_name}}</td>
+      </tr>
+    </tbody>
+  </table>  
+</div>
