@@ -1,1 +1,24 @@
-<p>capsules works!</p>
+<div class="container">
+<h1>Liste des capsules de spaceX</h1>
+
+  <table class="table table-dark table-hover table-rounded">
+    <thead>
+      <tr>
+        <th scope="col">Id de capsule</th>
+        <th scope="col">date de premier lancement</th>
+        <th scope="col">status</th>
+        <th scope="col">number of missions</th>
+        <th scope="col">details</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let result of capsules">
+      <tr>
+        <th scope="row">{{result.capsule_id}}</th>
+        <td>{{result.original_launch}}</td>
+        <td>{{result.status}}</td>
+        <td>{{result.missions.length}}</td>
+        <td>{{result.details}}</td>
+      </tr>
+    </tbody>
+  </table>  
+</div>

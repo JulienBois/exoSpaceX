@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -11,12 +10,8 @@ export class AppComponent {
   title = 'space-X';
   lancements: any;
   urlLaunches = 'https://api.spacexdata.com/v3/launches';
-  constructor(private router:Router, public http : HttpClient){
+  constructor(private router:Router){
 
-  }
-
-  ngOnInit(): void {
-    this.http.get<any>(this.urlLaunches).subscribe(data => this.lancements = data);
   }
 
     goToCapsules(){
@@ -24,7 +19,7 @@ export class AppComponent {
     }
 
     goToHome(){
-      this.router.navigate([''])
+      this.router.navigate(['/lancements']);
     }
     
 
