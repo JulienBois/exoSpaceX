@@ -16,29 +16,4 @@
     </div>
   </div>
   </nav>
-<div class="container">
-
-  
-<h1>Liste des lancements de spaceX</h1>
-
-  <table class="table table-dark table-hover table-rounded">
-    <thead>
-      <tr>
-        <th scope="col">Id de lancement</th>
-        <th scope="col">date de lancement</th>
-        <th scope="col">succès</th>
-        <th scope="col">nom de mission</th>
-        <th scope="col">nom de la capsule</th>
-      </tr>
-    </thead>
-    <tbody *ngFor="let result of lancements">
-      <tr>
-        <th scope="row">{{result.flight_number}}</th>
-        <td>{{result.launch_date_utc}}</td>
-        <td>{{result.launch_success}}</td>
-        <td>{{result.mission_name}}</td>
-        <td>{{result.rocket.rocket_name}}</td>
-      </tr>
-    </tbody>
-  </table>  
-</div>
+<router-outlet></router-outlet>

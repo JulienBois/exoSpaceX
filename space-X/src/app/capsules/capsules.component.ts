@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-capsules',
   templateUrl: './capsules.component.html',
@@ -15,14 +16,6 @@ export class CapsulesComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get<any>(this.urlCapsules).subscribe(data => this.capsules = data);
-  }
-
-  goToCapsules(){
-    this.router.navigate(['/capsules']);
-  }
-
-  goToHome(){
-    this.router.navigate([''])
   }
 
 }
