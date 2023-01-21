@@ -5,20 +5,18 @@
     <thead>
       <tr>
         <th scope="col">Id de capsule</th>
-        <th scope="col">date de premier lancement</th>
         <th scope="col">status</th>
+        <th scope="col">type</th>
         <th scope="col">number of missions</th>
-        <th scope="col">details</th>
       </tr>
     </thead>
     <tbody *ngFor="let result of capsules">
       <tr>
-        <th scope="row">{{result.capsule_id}}</th>
-        <td>{{result.original_launch}}</td>
+        <th scope="row">{{result.id}}</th>
         <td>{{result.status}}</td>
-        <td>{{result.missions.length}}</td>
-        <td>{{result.details}}</td>
+        <td>{{result.type}}</td>
+        <td>{{result.launches.length}}</td>
       </tr>
     </tbody>
-  </table>  
+  </table>
 </div>
