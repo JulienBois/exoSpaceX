@@ -1,0 +1,27 @@
+
+  <div class="container">
+
+
+  <h1>Liste des lancements de spaceX</h1>
+
+    <table class="table table-dark table-hover table-rounded">
+      <thead>
+        <tr>
+          <th scope="col">Numéro de vol</th>
+          <th scope="col">Nom de mission</th>
+          <th scope="col">date de lancement</th>
+          <th scope="col">Reussite</th>
+          <th scope="col">nom de la capsule</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let result of lancements">
+        <tr>
+          <th scope="row">{{result.flight_number}}</th>
+          <td>{{result.name}}</td>
+          <td>{{result.date_local}}</td>
+          <td>{{result.success?'Réussite':'Echec'}}</td>
+          <td><img src={{result.links.patch.small}}></td  >
+        </tr>
+      </tbody>
+    </table>
+  </div>

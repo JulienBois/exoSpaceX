@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Liste des capsules de spaceX</h1>
+
+  <table class="table table-dark table-hover table-rounded">
+    <thead>
+      <tr>
+        <th scope="col">Id de capsule</th>
+        <th scope="col">status</th>
+        <th scope="col">type</th>
+        <th scope="col">number of missions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let result of capsules">
+      <tr>
+        <th scope="row">{{result.id}}</th>
+        <td>{{result.status}}</td>
+        <td>{{result.type}}</td>
+        <td>{{result.launches.length}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
